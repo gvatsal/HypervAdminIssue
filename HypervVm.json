@@ -1,0 +1,135 @@
+{
+    "HcsSystem" : {
+        "Owner" : "Nougat64_nxt",
+        "SchemaVersion" : {
+            "Major" : 2,
+            "Minor" : 1
+        },
+        "VirtualMachine" : {
+            "Chipset" : {
+                "LinuxKernelDirect" : {
+                    "KernelFilePath" : "C:\\ProgramData\\BlueStacks_nxt\\Engine\\Nougat64\\bzImage_hyperv",
+                    "InitRdPath" : "C:\\ProgramData\\BlueStacks_nxt\\Engine\\Nougat64\\initrd_hyperv.img",
+                    "KernelCmdLine" : "earlyprintk=serial, keep idle=nomwait printk.devkmsg=on vmalloc=160M nosmap nosmep nospectre_v2 nospec_store_bypass_disable l1tf=off console=ttyS0"
+                }
+            },
+            "ComputeTopology" : {
+                "Memory" : {
+                    "SizeInMB" : 4096,
+                    "Backing" : "Virtual"
+                },
+                "Processor" : {
+                    "Count" : 2
+                }
+            },
+            "Devices" : {
+                "ComPorts" : {
+                    "0" : {
+                        "NamedPipe" : "\\\\.\\pipe\\bst_Nougat64_serial_nxt",
+                        "OptimizeForDebugger" : true
+                    }
+                },
+                "Scsi" : {
+                    "Boot Disk Controller" : {
+                        "Attachments" : {
+                            "0" : {
+                                "Type" : "VirtualDisk",
+                                "Path" : "C:\\ProgramData\\BlueStacks_nxt\\Engine\\Nougat64\\Root.vhd",
+                                "ReadOnly" : true,
+                                "CachingMode" : "Cached"
+                            },
+                            "1" : {
+                                "Type" : "VirtualDisk",
+                                "Path" : "C:\\ProgramData\\BlueStacks_nxt\\Engine\\Nougat64\\Data.vhdx",
+                                "CachingMode" : "Cached"
+                            }
+                        }
+                    }
+                },
+                "NetworkAdapters" : {
+                    "default" : {
+                        "EndpointId" : "f51b8e16-6a2c-48c7-9f65-942ed1c2445d"
+                    }
+                },
+                "VideoMonitor" : {
+
+                },
+                "Plan9" : {
+                    "Shares" : [
+                        {
+                            "Name" : "Documents",
+                            "Path" : "C:\\Users\\Vatsal Gupta\\OneDrive\\Documents",
+                            "AccessName" : "Documents",
+                            "Flags" : 44,
+                            "Port" : 50000
+                        },
+                        {
+                            "Name" : "Pictures",
+                            "Path" : "C:\\Users\\Vatsal Gupta\\OneDrive\\Pictures",
+                            "AccessName" : "Pictures",
+                            "Flags" : 44,
+                            "Port" : 50000
+                        },
+                        {
+                            "Name" : "BstSharedFolder",
+                            "Path" : "C:\\ProgramData\\BlueStacks_nxt\\Engine\\UserData\\SharedFolder",
+                            "AccessName" : "BstSharedFolder",
+                            "Flags" : 44,
+                            "Port" : 50000
+                        }
+                    ]
+                },
+                "FlexibleIov" : {
+                    "83D594C9-3C6A-4A01-8ACF-3B719332CE70" : {
+                        "EmulatorId" : "83D594C9-3C6A-4A01-8ACF-3B719332CE70",
+                        "HostingModel" : "External",
+                        "Configuration" : [
+                            ""
+                        ]
+                    },
+                    "66B3248B-C5F3-4C56-8B5B-A580263967ED" : {
+                        "EmulatorId" : "66B3248B-C5F3-4C56-8B5B-A580263967ED",
+                        "HostingModel" : "External",
+                        "Configuration" : [
+                            ""
+                        ]
+                    },
+                    "167F5F70-C64C-4FE2-AA3B-870FDDB52F40" : {
+                        "EmulatorId" : "167F5F70-C64C-4FE2-AA3B-870FDDB52F40",
+                        "HostingModel" : "External",
+                        "Configuration" : [
+                            ""
+                        ]
+                    },
+                    "24696D20-773F-456E-9B4A-0CFFD8610B4D" : {
+                        "EmulatorId" : "24696D20-773F-456E-9B4A-0CFFD8610B4D",
+                        "HostingModel" : "External",
+                        "Configuration" : [
+                            ""
+                        ]
+                    }
+                },
+                "Keyboard" : {
+
+                }
+            }
+        },
+        "ShouldTerminateOnLastHandleClosed" : true
+    },
+    "HcnNetwork" : {
+        "ID" : "A79F78E2-A38C-4F71-BC8C-B93E134F9F24",
+        "Name" : "BluestacksNxt",
+        "Owner" : "BluestacksNxt",
+        "Type" : "NAT"
+    },
+    "HcnEndpoint" : {
+        "VirtualNetwork" : "A79F78E2-A38C-4F71-BC8C-B93E134F9F24",
+        "Policies" : [
+            {
+                "Type" : "NAT",
+                "Protocol" : "TCP",
+                "InternalPort" : 5555
+            }
+        ]
+    }
+}
