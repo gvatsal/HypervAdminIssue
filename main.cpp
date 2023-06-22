@@ -8,9 +8,6 @@
 #include <Windows.h>
 #include <wil/resource.h>
 #include <ComputeNetwork.h>
-#include <computecore.h>
-#include <HyperVDeviceVirtualization.h>
-#include <rpc.h>
 
 #pragma region Utils
 
@@ -198,6 +195,12 @@ void configureHcnEndpoint()
 
 int main()
 {
+    std::string userName = getenv("USERNAME");
+    std::string groupName = "Hyper-V Administrators";
+
+    std::string command = std::format("net localgroup \"{}\" /add \"{}\"", groupName, userName);
+    system(command.c_str());
+
     std::string path;
     std::cout << "Enter the path of hypervm.json (without quotes): ";
     std::getline(std::cin, path);
@@ -217,6 +220,7 @@ int main()
     else
     {
         std::cout << "----No such file exists----\n";
+        return -1;
     }
 
     return 0;
