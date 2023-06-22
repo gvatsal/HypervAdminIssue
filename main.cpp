@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <format>
 #include <filesystem>
 #include <fstream>
@@ -105,15 +105,6 @@ struct VmmgrHypervApi
     static inline decltype(&::HcnCloseEndpoint) HcnCloseEndpoint{ nullptr };
     static inline decltype(&::HcnCreateEndpoint) HcnCreateEndpoint{ nullptr };
     static inline decltype(&::HcnDeleteEndpoint) HcnDeleteEndpoint{ nullptr };
-
-    static inline decltype(&::HcsCloseOperation) HcsCloseOperation{ nullptr };
-    static inline decltype(&::HcsCloseComputeSystem) HcsCloseComputeSystem{ nullptr };
-    static inline decltype(&::HcsCreateOperation) HcsCreateOperation{ nullptr };
-    static inline decltype(&::HcsCreateComputeSystem) HcsCreateComputeSystem{ nullptr };
-    static inline decltype(&::HcsWaitForOperationResult) HcsWaitForOperationResult{ nullptr };
-
-    static inline decltype(&::HdvInitializeDeviceHost) HdvInitializeDeviceHost{ nullptr };
-    static inline decltype(&::HdvTeardownDeviceHost) HdvTeardownDeviceHost{ nullptr };
 };
 
 void VmmgrHypervApi::init()
@@ -146,49 +137,11 @@ void VmmgrHypervApi::init()
         if (symbolAddress != nullptr)
             HcnDeleteEndpoint = (decltype(&::HcnDeleteEndpoint))symbolAddress;
     }
-
-    HMODULE mComputeCoreHandle = LoadLibrary(L"ComputeCore.dll");
-    if (mComputeCoreHandle != nullptr)
-    {
-        void* symbolAddress = GetProcAddress((HMODULE)mComputeCoreHandle, "HcsCloseOperation");
-        if (symbolAddress != nullptr)
-            HcsCloseOperation = (decltype(&::HcsCloseOperation))symbolAddress;
-
-        symbolAddress = GetProcAddress((HMODULE)mComputeCoreHandle, "HcsCloseComputeSystem");
-        if (symbolAddress != nullptr)
-            HcsCloseComputeSystem = (decltype(&::HcsCloseComputeSystem))symbolAddress;
-
-        symbolAddress = GetProcAddress((HMODULE)mComputeCoreHandle, "HcsCreateOperation");
-        if (symbolAddress != nullptr)
-            HcsCreateOperation = (decltype(&::HcsCreateOperation))symbolAddress;
-
-        symbolAddress = GetProcAddress((HMODULE)mComputeCoreHandle, "HcsCreateComputeSystem");
-        if (symbolAddress != nullptr)
-            HcsCreateComputeSystem = (decltype(&::HcsCreateComputeSystem))symbolAddress;
-
-        symbolAddress = GetProcAddress((HMODULE)mComputeCoreHandle, "HcsWaitForOperationResult");
-        if (symbolAddress != nullptr)
-            HcsWaitForOperationResult = (decltype(&::HcsWaitForOperationResult))symbolAddress;
-    }
-
-    HMODULE mVmDeviceHostHandle = LoadLibrary(L"VmDeviceHost.dll");
-    if (mVmDeviceHostHandle != nullptr)
-    {
-        void* symbolAddress = GetProcAddress((HMODULE)mVmDeviceHostHandle, "HdvInitializeDeviceHost");
-        if (symbolAddress != nullptr)
-            HdvInitializeDeviceHost = (decltype(&::HdvInitializeDeviceHost))symbolAddress;
-
-        symbolAddress = GetProcAddress((HMODULE)mVmDeviceHostHandle, "HdvTeardownDeviceHost");
-        if (symbolAddress != nullptr)
-            HdvTeardownDeviceHost = (decltype(&::HdvTeardownDeviceHost))symbolAddress;
-    }
 }
 
 boost::json::value mAndroidJson;
 wil::unique_any < HCN_NETWORK, decltype(&::HcnCloseNetwork), [](HCN_NETWORK h) { return VmmgrHypervApi::HcnCloseNetwork(h); } > mHcnNetwork;
 wil::unique_any < HCN_ENDPOINT, decltype(&::HcnCloseEndpoint), [](HCN_ENDPOINT h) { return VmmgrHypervApi::HcnCloseEndpoint(h); } > mHcnEndpoint;
-wil::unique_any < HCS_SYSTEM, decltype(&::HcsCloseComputeSystem), [](HCS_SYSTEM h) { return VmmgrHypervApi::HcsCloseComputeSystem(h); } > mHcsSystem;
-wil::unique_any < HDV_HOST, decltype(&::HdvTeardownDeviceHost), [](HDV_HOST h) { return VmmgrHypervApi::HdvTeardownDeviceHost(h); } > mHdvHost;
 
 void configureHcnNetwork()
 {
@@ -197,12 +150,13 @@ void configureHcnNetwork()
 
     if (UuidFromStringA((RPC_CSTR)networkGuid.data(), &guidNetwork) != RPC_S_OK)
     {
-        std::cout << std::format("{} - Failed to parse Network guid: {}", __func__, networkGuid) << "\n";
+        std::cout << std::format("{} - Failed to parse Network guid: {}\n", __func__, networkGuid) << "\n";
     }
 
     wil::unique_cotaskmem_string errStr;
     HRESULT result = VmmgrHypervApi::HcnOpenNetwork(guidNetwork, &mHcnNetwork, &errStr);
-    std::cout << std::format("{} - HcnOpenNetwork:\nresult {}\nerrStr {}", __func__, result, xstrUtf8(errStr.get())) << "\n";
+
+    std::cout << std::format("{} - HcnOpenNetwork:\nresult {}\nerrStr {}\n", __func__, result, xstrUtf8(errStr.get())) << "\n";
 
     if (result == HCN_E_NETWORK_NOT_FOUND)
     {
@@ -212,7 +166,8 @@ void configureHcnNetwork()
             &mHcnNetwork,                                   // Network
             &errStr                                         // ErrorRecord
         );
-        std::cout << std::format("{} - HcnCreateNetwork\nresult {}\nerrStr {}", __func__, result, xstrUtf8(errStr.get())) << "\n";
+
+        std::cout << std::format("{} - HcnCreateNetwork\nresult {}\nerrStr {}\n", __func__, result, xstrUtf8(errStr.get())) << "\n";
     }
 }
 
@@ -224,12 +179,12 @@ void configureHcnEndpoint()
     GUID guidEndpoint;
     if (UuidFromStringA((RPC_CSTR)endpointGuid.data(), &guidEndpoint) != RPC_S_OK)
     {
-        std::cout << std::format("{} - Failed to parse Endpoint guid: {}", __func__, endpointGuid);
+        std::cout << std::format("{} - Failed to parse Endpoint guid: {}\n", __func__, endpointGuid);
     }
 
     wil::unique_cotaskmem_string errStr;
     HRESULT result = VmmgrHypervApi::HcnDeleteEndpoint(guidEndpoint, &errStr);
-    std::cout << std::format("{} - HcnDeleteEndpoint:\nresult {}\nerrStr {}", __func__, result, xstrUtf8(errStr.get())) << "\n";
+    std::cout << std::format("{} - HcnDeleteEndpoint:\nresult {}\nerrStr {}\n", __func__, result, xstrUtf8(errStr.get())) << "\n";
 
     result = VmmgrHypervApi::HcnCreateEndpoint(
         mHcnNetwork.get(),                                  // Network
@@ -237,32 +192,8 @@ void configureHcnEndpoint()
         xstrUtf16(mAndroidJson / "HcnEndpoint").data(),     // Settings
         &mHcnEndpoint,                                      // Endpoint
         &errStr);                                           // ErrorRecord
-    std::cout << std::format("{} - HcnCreateEndpoint\nresult {}\nerrStr {}", __func__, result, xstrUtf8(errStr.get())) << "\n";
-}
 
-void configureHcsSystem()
-{
-    wil::unique_any < HCS_OPERATION, decltype(&::HcsCloseOperation), [](HCS_OPERATION h) { return VmmgrHypervApi::HcsCloseOperation(h); } > hcsOperation(VmmgrHypervApi::HcsCreateOperation(nullptr, nullptr));
-    std::cout << std::format("{} - HcsCreateOperation:\nresult {}", __func__, hcsOperation == NULL ? "failed" : "success") << "\n";
-
-    HRESULT result = VmmgrHypervApi::HcsCreateComputeSystem(
-        xstrUtf16("Nougat64_nxt").data(),               // Id
-        xstrUtf16(mAndroidJson / "HcsSystem").data(),   // configuration
-        hcsOperation.get(),                             // Operation
-        nullptr,                                        // reserved
-        &mHcsSystem                                     // ComputeSystem
-    );
-    std::cout << std::format("{} - HcsCreateComputeSystem:\nresult {}", __func__, result) << "\n";
-
-    wil::unique_cotaskmem_string errStr;
-    result = VmmgrHypervApi::HcsWaitForOperationResult(hcsOperation.get(), INFINITE, &errStr);
-    std::cout << std::format("{} - HcsWaitForOperationResult:\nresult {}\nerrStr {}", __func__, result, xstrUtf8(errStr.get())) << "\n";
-}
-
-void configureHdvHost()
-{
-    HRESULT result = VmmgrHypervApi::HdvInitializeDeviceHost(mHcsSystem.get(), &mHdvHost);
-    std::cout << std::format("{} - HdvInitializeDeviceHost\nresult {}", __func__, result) << "\n";
+    std::cout << std::format("{} - HcnCreateEndpoint\nresult {}\nerrStr {}\n", __func__, result, xstrUtf8(errStr.get())) << "\n";
 }
 
 int main()
@@ -274,15 +205,13 @@ int main()
     if (std::filesystem::exists(std::filesystem::path(path)))
     {
         std::cout << "----Execution started----\n";
-        
+
         mAndroidJson = xjsonReadFromFile(std::filesystem::path(path));
         VmmgrHypervApi::init();
-        
+
         configureHcnNetwork();
         configureHcnEndpoint();
-        configureHcsSystem();
-        configureHdvHost();
-        
+
         std::cout << "----Execution finished----\n";
     }
     else
