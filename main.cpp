@@ -220,8 +220,8 @@ int main()
     else
     {
         std::cout << "----No such file exists----\n";
-        return -1;
     }
 
+    std::cin.get();
     return 0;
 }

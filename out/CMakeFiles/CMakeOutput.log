@@ -9,8 +9,8 @@ The output was:
 Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 6/23/2023 12:40:06 AM.
-Project "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+Build started 6/23/2023 4:29:03 PM.
+Project "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
@@ -24,13 +24,13 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\code\vcpkg\installed\x64-windows\lib" /LIBPATH:"C:\code\vcpkg\installed\x64-windows\lib\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\code\vcpkg\installed\x64-windows\lib\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
-  CompilerIdC.vcxproj -> C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe
+  CompilerIdC.vcxproj -> C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe
 AppLocalFromInstalled:
-  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
+  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
-  The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
-  "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
+  The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
+  "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -38,20 +38,20 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
-Done Building Project "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+Done Building Project "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.74
+Time Elapsed 00:00:03.10
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
-The C compiler identification is MSVC, found in "C:/VatsalGupta/Projects/cpp/HypervAdminIssue/out/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdC/CompilerIdC.exe"
+The C compiler identification is MSVC, found in "C:/code_private/HypervAdminIssue/out/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdC/CompilerIdC.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -63,8 +63,8 @@ The output was:
 Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 6/23/2023 12:40:10 AM.
-Project "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+Build started 6/23/2023 4:29:07 PM.
+Project "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
@@ -78,13 +78,13 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\code\vcpkg\installed\x64-windows\lib" /LIBPATH:"C:\code\vcpkg\installed\x64-windows\lib\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\code\vcpkg\installed\x64-windows\lib\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe
 AppLocalFromInstalled:
-  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
+  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
-  The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
-  "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
+  The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
+  "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\code\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe" "C:\code\vcpkg\installed\x64-windows\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -92,46 +92,46 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Done Building Project "C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+Done Building Project "C:\code_private\HypervAdminIssue\out\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.25
+Time Elapsed 00:00:01.84
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "C:/VatsalGupta/Projects/cpp/HypervAdminIssue/out/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "C:/code_private/HypervAdminIssue/out/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/VatsalGupta/Projects/cpp/HypervAdminIssue/out/CMakeFiles/CMakeTmp
+Change Dir: C:/code_private/HypervAdminIssue/out/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_709d2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_0f20a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCCompilerABI.c
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_709d2.dir\Debug\\" /Fd"cmTC_709d2.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCCompilerABI.c"
-  cmTC_709d2.vcxproj -> C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\CMakeTmp\Debug\cmTC_709d2.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0f20a.dir\Debug\\" /Fd"cmTC_0f20a.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCCompilerABI.c"
+  cmTC_0f20a.vcxproj -> C:\code_private\HypervAdminIssue\out\CMakeFiles\CMakeTmp\Debug\cmTC_0f20a.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/VatsalGupta/Projects/cpp/HypervAdminIssue/out/CMakeFiles/CMakeTmp
+Change Dir: C:/code_private/HypervAdminIssue/out/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_662ae.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe cmTC_0e300.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30148 for x64
   Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_662ae.dir\Debug\\" /Fd"cmTC_662ae.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_662ae.vcxproj -> C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\CMakeTmp\Debug\cmTC_662ae.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0e300.dir\Debug\\" /Fd"cmTC_0e300.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_0e300.vcxproj -> C:\code_private\HypervAdminIssue\out\CMakeFiles\CMakeTmp\Debug\cmTC_0e300.exe
 
 
 

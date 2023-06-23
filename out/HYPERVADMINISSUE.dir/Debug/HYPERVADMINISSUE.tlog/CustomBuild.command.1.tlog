@@ -1,6 +1,6 @@
-^C:\VATSALGUPTA\PROJECTS\CPP\HYPERVADMINISSUE\CMAKELISTS.TXT
+^C:\CODE_PRIVATE\HYPERVADMINISSUE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/VatsalGupta/Projects/cpp/HypervAdminIssue -BC:/VatsalGupta/Projects/cpp/HypervAdminIssue/out --check-stamp-file C:/VatsalGupta/Projects/cpp/HypervAdminIssue/out/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/code_private/HypervAdminIssue -BC:/code_private/HypervAdminIssue/out --check-stamp-file C:/code_private/HypervAdminIssue/out/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

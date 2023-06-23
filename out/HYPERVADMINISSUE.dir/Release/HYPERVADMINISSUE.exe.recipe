@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\x64\Release\ZERO_CHECK</FullPath>
+      <FullPath>c:\code_private\HypervAdminIssue\out\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\Release\HYPERVADMINISSUE.exe</FullPath>
+      <FullPath>C:\code_private\HypervAdminIssue\out\Release\HYPERVADMINISSUE.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

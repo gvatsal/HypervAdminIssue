@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\VatsalGupta\Projects\cpp\HypervAdminIssue\out\CMakeFiles\5e272c74cb3ee53e8f684d0b24a15ed4\generate.stamp.rule">
+    <CustomBuild Include="C:\code_private\HypervAdminIssue\out\CMakeFiles\0b2ca12ec03dc7c3c74c5c2b74e4462e\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{7B29490F-71C3-36D1-A9A5-BD916B1E479E}</UniqueIdentifier>
+      <UniqueIdentifier>{834F898D-176B-3C0B-B072-4760F1C4C95D}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
